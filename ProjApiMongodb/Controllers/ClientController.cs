@@ -53,7 +53,7 @@ namespace ProjApiMongodb.Controllers
             if (id == null) return NotFound();
 
             var client  = _clientService.Get(id);
-            if (id == null) return NotFound();
+            if (client == null) return NotFound();
             _clientService.Delete(id);
 
             return Ok();
